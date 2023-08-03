@@ -1,0 +1,66 @@
+#include <iostream>
+#include <string>
+#include <stdlib.h> 
+
+using namespace std;
+	int TotalLogin, CharaB5, Yoi,Hehe;
+	string grade,NameArray;
+	int main(int agrc, char *argv[])
+
+	{
+	cout << "@@@ Perhitungan Luck gacha @@@" << endl;
+	cout << "------------------------------" << endl;
+	cout << "1. Gacha Kuyy				   " << endl;
+	cout << "2. Hitung Luck				   " << endl;
+	cout << "Silahkan pilih :  ";
+	cin>>Hehe;
+	cout << "------------------------------" << endl;
+	
+	switch(Hehe)
+	{
+	        case  2:
+			cout<<" Masukkan Total Login : ";
+			cin>>TotalLogin;
+			cout<<" Masukkan Jumlah Chara B5 : ";
+			cin>>CharaB5;
+		 Yoi = TotalLogin / CharaB5;
+	
+	if (Yoi >= 100) {
+		grade="E";
+	} else if (Yoi >= 50)   {
+		grade=" D";
+	} else if (Yoi >= 40) {
+		grade=" Luck lu C ";
+	} else if (Yoi >= 30) {
+		grade=" Luck lu B";
+	} else if (Yoi >= 20) {
+		grade=" Luck lu A ";
+	}else if (Yoi >= 10) {
+		grade="  EX ";
+	}else if (Yoi >= 1) {
+		grade="  EX ++";
+	}
+		cout<<"Hasil Luck mu adalah "<<grade<<endl;
+			break;
+			
+			case 1:
+				string NameArray[10] = {"Andi*2" , "Panji*5", "Samuel*1", "Tri*3", "Agus*4", "Ghani*2","Wawan*3","Samsul*4","Minto*3","Huda*5"};
+
+				cout <<"Hasil Gachamu\n " ;
+				
+
+				for (int j =0; j<5; j++)
+{
+				string Random;
+				Random = NameArray[rand() % 10];
+				cout << Random << endl;
+				NameArray[j] = Random ;
+			
+			cout<<endl;
+	}
+	
+
+
+return 0;
+}
+}
